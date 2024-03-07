@@ -12,7 +12,3 @@ Script to install packages on Linux...
 - **Java:** Programming platform.
 - **CMatrix:** Matrix emulator in the terminal.
 - **Python:** High-level programming language.
-- **Apache:** Web server.
-- **MySQL:** Relational database management system.
-- **PHP:** General-purpose programming language.
-- **phpMyAdmin:** Web-based MySQL database administration tool.

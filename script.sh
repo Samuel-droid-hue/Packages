@@ -1,5 +1,13 @@
 #!/bin/bash
 
+check_installed() {
+	if command -v $1 &>/dev/null; then
+		echo "$1 is installed"
+	else
+		echo "$1 is installed"
+	fi
+}
+
 # Install Git
 sudo apt-get update
 sudo apt-get install -y git
@@ -44,27 +52,13 @@ sudo apt-get update
 sudo apt-get install -y python3
 sudo apt-get install -y python3-pip
 
-# Install Apache
-sudo apt-get update
-sudo apt-get install -y apache2
-
-# Install MySQL
-sudo apt-get update
-sudo apt-get install -y mysql-server
-
-# Install PHP
-sudo apt-get update
-sudo apt-get install -y php
-
-# Install PHPMyAdmin
-sudo apt-get update
-sudo apt-get install -y phpmyadmin
-
-# Account privileges
-sudo mysql -u root -p
-echo "create user 'samuel'@'%' identified by 'password';
-grant all privileges on *.* to 'samuel'@'%' with grant option;
-flush privileges;" > query.sql
-mysql -u root -p < query.sql
-rm -f query.sql
-
+# Check if each program is installed
+check_installed tree
+check_installed git
+check_installed code
+check_installed vim
+check_installed node
+check_installed ng
+check_installed java
+check_installed cmatrix
+check_installed python3
